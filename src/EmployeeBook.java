@@ -49,7 +49,7 @@ public class EmployeeBook {
         int min = Integer.MAX_VALUE;
         int index = 0;
         if (dept == 0) {
-            for (int i = 1; i < employee.length; i++) {
+            for (int i = 0; i < employee.length; i++) {
                 if (employee[i].getSalary() < min) {
                     min = employee[i].getSalary();
                     index = i;
@@ -65,14 +65,14 @@ public class EmployeeBook {
                 }
             }
         }
-        return employee[index].getEmployeeName() + "- " + min;
+        return employee[index].getEmployeeName() + " - " + min;
     }
 
     public String findMaxSalary(int dept) {
         int max = 0;
         int index = 0;
         if (dept == 0) {
-            for (int i = 1; i < employee.length; i++) {
+            for (int i = 0; i < employee.length; i++) {
                 if (employee[i].getSalary() > max) {
                     max = employee[i].getSalary();
                     index = i;
@@ -88,7 +88,7 @@ public class EmployeeBook {
                 }
             }
         }
-        return employee[index].getEmployeeName() + "- " + max;
+        return employee[index].getEmployeeName() + " - " + max;
     }
 
     public StringBuilder printEmployeesNames() {
